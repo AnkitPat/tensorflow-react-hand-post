@@ -21,7 +21,7 @@ function App() {
         // Make detections
         setInterval(() => {
             detect();
-        }, 3000);
+        }, 300);
     };
     runHandpose();
 }, []);
