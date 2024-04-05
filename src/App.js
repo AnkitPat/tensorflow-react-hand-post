@@ -93,7 +93,9 @@ function App() {
       canvas.width = videoWidth;
       canvas.height = videoHeight;
 
-      const model = await handpose.load()
+      const model = await handpose.load({
+        modelUrl: './load.json',
+      })
       const hand = await model.estimateHands(video);
       console.log(hand);
       renderHandKeypoints(hand, canvas.getContext('2d'))
